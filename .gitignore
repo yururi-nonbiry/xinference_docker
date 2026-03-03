@@ -1,0 +1,19 @@
+# Xinference Data
+xinference-data/
+
+# OS/IDE junk
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
