@@ -1,0 +1,16 @@
+{
+    "model_name": "ruri-v3-reranker-large",
+    "type": "normal",
+    "language": [
+        "ja"
+    ],
+    "model_id": "cl-nagoya/ruri-v3-reranker-310m",
+    "max_tokens": 8192,
+    "model_specs": [
+        {
+            "model_format": "pytorch",
+            "model_hub": "huggingface",
+            "quantization": "none"
+        }
+    ]
+}

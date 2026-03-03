@@ -1,0 +1,34 @@
+2025-12-29 20:16:58,938 xinference.core.supervisor 55 INFO     Xinference supervisor 0.0.0.0:30416 started
+2025-12-29 20:16:58,953 xinference.core.worker 55 INFO     Starting metrics export server at 0.0.0.0:None
+2025-12-29 20:16:58,954 xinference.core.worker 55 INFO     Checking metrics export server...
+2025-12-29 20:17:00,890 xinference.core.worker 55 INFO     Metrics server is started at: http://0.0.0.0:39057
+2025-12-29 20:17:00,890 xinference.core.worker 55 INFO     Purge cache directory: /data/cache
+2025-12-29 20:17:00,891 xinference.core.utils 55 INFO     Remove empty directory: /data/cache/v2
+2025-12-29 20:17:00,892 xinference.core.worker 55 INFO     Connected to supervisor as a fresh worker
+2025-12-29 20:17:00,907 xinference.core.worker 55 INFO     Xinference worker 0.0.0.0:30416 started
+2025-12-29 20:17:07,225 xinference.api.restful_api 1 INFO     Starting Xinference at endpoint: http://0.0.0.0:9997
+2025-12-29 20:17:07,364 uvicorn.error 1 INFO     Started server process [1]
+2025-12-29 20:17:07,364 uvicorn.error 1 INFO     Waiting for application startup.
+2025-12-29 20:17:07,364 uvicorn.error 1 INFO     Application startup complete.
+2025-12-29 20:17:07,364 uvicorn.error 1 INFO     Uvicorn running on http://0.0.0.0:9997 (Press CTRL+C to quit)
+2025-12-29 20:17:07,450 uvicorn.access 1 INFO     192.168.100.12:54120 - "GET / HTTP/1.1" 307
+2025-12-29 20:17:07,475 uvicorn.access 1 INFO     192.168.100.12:54120 - "GET /ui/ HTTP/1.1" 200
+2025-12-29 20:17:07,523 uvicorn.access 1 INFO     192.168.100.12:54120 - "GET /ui/static/js/main.260d68c4.js HTTP/1.1" 200
+2025-12-29 20:17:07,524 uvicorn.access 1 INFO     192.168.100.12:57807 - "GET /ui/static/css/main.cbff5aac.css HTTP/1.1" 200
+2025-12-29 20:17:08,469 uvicorn.access 1 INFO     192.168.100.12:54120 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 20:17:08,471 uvicorn.access 1 INFO     192.168.100.12:57807 - "GET /v1/cluster/auth HTTP/1.1" 200
+2025-12-29 20:17:08,475 uvicorn.access 1 INFO     192.168.100.12:61941 - "GET /ui/static/media/icon.4603d52c63041e5dfbfd.webp HTTP/1.1" 200
+2025-12-29 20:17:08,544 uvicorn.access 1 INFO     192.168.100.12:61941 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 20:17:08,591 uvicorn.access 1 INFO     192.168.100.12:57807 - "GET /ui/favicon.svg HTTP/1.1" 200
+2025-12-29 20:17:08,604 uvicorn.access 1 INFO     192.168.100.12:58116 - "GET /v1/cluster/auth HTTP/1.1" 200
+2025-12-29 20:17:08,895 uvicorn.access 1 INFO     192.168.100.12:57465 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 20:17:08,895 uvicorn.access 1 INFO     192.168.100.12:54120 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 20:17:08,923 uvicorn.access 1 INFO     192.168.100.12:61941 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 20:17:10,524 uvicorn.access 1 INFO     192.168.100.12:57465 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 20:17:10,524 uvicorn.access 1 INFO     192.168.100.12:54120 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 20:17:31,083 uvicorn.access 1 INFO     192.168.100.12:56986 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 20:17:31,085 uvicorn.access 1 INFO     192.168.100.12:54651 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 20:19:17,584 uvicorn.error 1 INFO     Shutting down
+2025-12-29 20:19:17,684 uvicorn.error 1 INFO     Waiting for application shutdown.
+2025-12-29 20:19:17,684 uvicorn.error 1 INFO     Application shutdown complete.
+2025-12-29 20:19:17,684 uvicorn.error 1 INFO     Finished server process [1]

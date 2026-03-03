@@ -1,0 +1,16 @@
+{
+    "model_name": "ruri-v3-310m",
+    "dimensions": 768,
+    "max_tokens": 8192,
+    "language": [
+        "ja"
+    ],
+    "model_specs": [
+        {
+            "model_format": "pytorch",
+            "model_hub": "huggingface",
+            "model_id": "cl-nagoya/ruri-v3-310m",
+            "quantization": "none"
+        }
+    ]
+}

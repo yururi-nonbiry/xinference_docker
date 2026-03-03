@@ -1,0 +1,93 @@
+2025-12-29 16:45:11,533 xinference.core.supervisor 55 INFO     Xinference supervisor 0.0.0.0:44246 started
+2025-12-29 16:45:11,547 xinference.core.worker 55 INFO     Starting metrics export server at 0.0.0.0:None
+2025-12-29 16:45:11,548 xinference.core.worker 55 INFO     Checking metrics export server...
+2025-12-29 16:45:13,346 xinference.core.worker 55 INFO     Metrics server is started at: http://0.0.0.0:38619
+2025-12-29 16:45:13,346 xinference.core.worker 55 INFO     Purge cache directory: /data/cache
+2025-12-29 16:45:13,347 xinference.core.utils 55 INFO     Remove empty directory: /data/cache/v2
+2025-12-29 16:45:13,348 xinference.core.worker 55 INFO     Connected to supervisor as a fresh worker
+2025-12-29 16:45:13,362 xinference.core.worker 55 INFO     Xinference worker 0.0.0.0:44246 started
+2025-12-29 16:45:19,465 xinference.api.restful_api 1 INFO     Starting Xinference at endpoint: http://0.0.0.0:9997
+2025-12-29 16:45:19,791 uvicorn.error 1 INFO     Started server process [1]
+2025-12-29 16:45:19,791 uvicorn.error 1 INFO     Waiting for application startup.
+2025-12-29 16:45:19,791 uvicorn.error 1 INFO     Application startup complete.
+2025-12-29 16:45:19,791 uvicorn.error 1 INFO     Uvicorn running on http://0.0.0.0:9997 (Press CTRL+C to quit)
+2025-12-29 16:45:19,991 uvicorn.access 1 INFO     192.168.100.12:64090 - "GET / HTTP/1.1" 307
+2025-12-29 16:45:20,175 uvicorn.access 1 INFO     192.168.100.12:64090 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 16:45:20,182 uvicorn.access 1 INFO     192.168.100.12:64139 - "GET /v1/cluster/auth HTTP/1.1" 200
+2025-12-29 16:45:20,259 uvicorn.access 1 INFO     192.168.100.12:55951 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 16:45:20,261 uvicorn.access 1 INFO     192.168.100.12:64139 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:45:20,262 uvicorn.access 1 INFO     192.168.100.12:64090 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:12,565 uvicorn.access 1 INFO     192.168.100.12:62296 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:12,606 uvicorn.access 1 INFO     192.168.100.12:57122 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:50:12,991 uvicorn.access 1 INFO     192.168.100.12:62296 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:50:13,029 uvicorn.access 1 INFO     192.168.100.12:54332 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:21,048 uvicorn.access 1 INFO     192.168.100.12:54692 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:21,067 uvicorn.access 1 INFO     192.168.100.12:53486 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:50:26,753 uvicorn.access 1 INFO     192.168.100.12:52519 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:50:26,753 uvicorn.access 1 INFO     192.168.100.12:53044 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:39,710 uvicorn.access 1 INFO     192.168.100.12:61516 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:50:40,096 uvicorn.access 1 INFO     192.168.100.12:63122 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:40,120 uvicorn.access 1 INFO     192.168.100.12:61516 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:50:41,920 uvicorn.access 1 INFO     192.168.100.12:63122 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:50:41,982 uvicorn.access 1 INFO     192.168.100.12:61516 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:42,055 uvicorn.access 1 INFO     192.168.100.12:63122 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:50:55,892 uvicorn.access 1 INFO     192.168.100.12:60364 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:50:56,003 uvicorn.access 1 INFO     192.168.100.12:51139 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:56,007 uvicorn.access 1 INFO     192.168.100.12:60364 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:50:59,098 uvicorn.access 1 INFO     192.168.100.12:60364 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:50:59,152 uvicorn.access 1 INFO     192.168.100.12:51139 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:50:59,191 uvicorn.access 1 INFO     192.168.100.12:60364 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:51:12,622 uvicorn.access 1 INFO     192.168.100.12:49669 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:51:12,658 uvicorn.access 1 INFO     192.168.100.12:58040 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:51:14,933 uvicorn.access 1 INFO     192.168.100.12:49669 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:51:15,185 uvicorn.access 1 INFO     192.168.100.12:58657 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:51:15,189 uvicorn.access 1 INFO     192.168.100.12:49669 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:52:20,635 uvicorn.access 1 INFO     192.168.100.12:56945 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:52:20,801 uvicorn.access 1 INFO     192.168.100.12:51799 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:52:20,804 uvicorn.access 1 INFO     192.168.100.12:56945 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:52:22,076 uvicorn.access 1 INFO     192.168.100.12:51799 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:52:22,124 uvicorn.access 1 INFO     192.168.100.12:56945 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:52:25,848 uvicorn.access 1 INFO     192.168.100.12:56945 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:52:25,888 uvicorn.access 1 INFO     192.168.100.12:51799 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:52:25,960 uvicorn.access 1 INFO     192.168.100.12:56945 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:52:40,175 uvicorn.access 1 INFO     192.168.100.12:63523 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:52:40,314 uvicorn.access 1 INFO     192.168.100.12:63523 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:52:40,314 uvicorn.access 1 INFO     192.168.100.12:56921 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:53:15,142 uvicorn.access 1 INFO     192.168.100.12:53978 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:53:15,336 uvicorn.access 1 INFO     192.168.100.12:52024 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:53:15,537 uvicorn.access 1 INFO     192.168.100.12:53978 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:58:29,956 uvicorn.access 1 INFO     192.168.100.12:53489 - "GET /ui/ HTTP/1.1" 304
+2025-12-29 16:58:30,144 uvicorn.access 1 INFO     192.168.100.12:53489 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 16:58:30,179 uvicorn.access 1 INFO     192.168.100.12:53962 - "GET /v1/cluster/auth HTTP/1.1" 200
+2025-12-29 16:58:30,255 uvicorn.access 1 INFO     192.168.100.12:57299 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 16:58:30,266 uvicorn.access 1 INFO     192.168.100.12:49988 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:58:30,266 uvicorn.access 1 INFO     192.168.100.12:49788 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:58:59,173 uvicorn.access 1 INFO     192.168.100.12:60980 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:58:59,426 uvicorn.access 1 INFO     192.168.100.12:57722 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:59:24,084 uvicorn.access 1 INFO     192.168.100.12:56897 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:59:24,195 uvicorn.access 1 INFO     192.168.100.12:62136 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 17:00:28,589 uvicorn.access 1 INFO     192.168.100.12:62822 - "GET /v1/models/families HTTP/1.1" 200
+2025-12-29 17:00:28,591 uvicorn.access 1 INFO     192.168.100.12:59490 - "GET /v1/models/prompts HTTP/1.1" 200
+2025-12-29 17:00:42,322 uvicorn.access 1 INFO     192.168.100.12:51637 - "GET /v1/models/families HTTP/1.1" 200
+2025-12-29 17:00:42,332 uvicorn.access 1 INFO     192.168.100.12:53851 - "GET /v1/models/prompts HTTP/1.1" 200
+2025-12-29 17:00:44,591 uvicorn.access 1 INFO     192.168.100.12:55084 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 17:00:44,591 uvicorn.access 1 INFO     192.168.100.12:51637 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 17:00:44,626 uvicorn.access 1 INFO     192.168.100.12:53851 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 17:00:45,385 uvicorn.access 1 INFO     192.168.100.12:51637 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 17:00:45,395 uvicorn.access 1 INFO     192.168.100.12:55084 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 17:00:49,147 uvicorn.access 1 INFO     192.168.100.12:53851 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 17:00:49,147 uvicorn.access 1 INFO     192.168.100.12:55084 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 17:00:55,619 uvicorn.access 1 INFO     192.168.100.12:58346 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 17:00:55,629 uvicorn.access 1 INFO     192.168.100.12:54284 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 17:01:05,244 uvicorn.access 1 INFO     192.168.100.12:64361 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 17:01:05,248 uvicorn.access 1 INFO     192.168.100.12:50626 - "GET /v1/cluster/info?detailed=true HTTP/1.1" 200
+2025-12-29 17:01:05,273 uvicorn.access 1 INFO     192.168.100.12:64361 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 17:01:05,281 uvicorn.access 1 INFO     192.168.100.12:50626 - "GET /v1/cluster/info?detailed=true HTTP/1.1" 200
+2025-12-29 17:01:05,314 uvicorn.access 1 INFO     192.168.100.12:50626 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 17:01:05,318 uvicorn.access 1 INFO     192.168.100.12:64361 - "GET /v1/cluster/info?detailed=true HTTP/1.1" 200
+2025-12-29 17:01:05,870 uvicorn.access 1 INFO     192.168.100.12:50626 - "GET /v1/models/families HTTP/1.1" 200
+2025-12-29 17:01:05,880 uvicorn.access 1 INFO     192.168.100.12:64361 - "GET /v1/models/prompts HTTP/1.1" 200
+2025-12-29 17:02:24,841 uvicorn.error 1 INFO     Shutting down
+2025-12-29 17:02:24,942 uvicorn.error 1 INFO     Waiting for application shutdown.
+2025-12-29 17:02:24,943 uvicorn.error 1 INFO     Application shutdown complete.
+2025-12-29 17:02:24,943 uvicorn.error 1 INFO     Finished server process [1]

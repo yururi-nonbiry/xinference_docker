@@ -1,0 +1,17 @@
+2025-12-29 15:54:06,447 xinference.core.supervisor 55 INFO     Xinference supervisor 0.0.0.0:47687 started
+2025-12-29 15:54:06,462 xinference.core.worker 55 INFO     Starting metrics export server at 0.0.0.0:None
+2025-12-29 15:54:06,463 xinference.core.worker 55 INFO     Checking metrics export server...
+2025-12-29 15:54:08,809 xinference.core.worker 55 INFO     Metrics server is started at: http://0.0.0.0:45313
+2025-12-29 15:54:08,809 xinference.core.worker 55 INFO     Purge cache directory: /data/cache
+2025-12-29 15:54:08,809 xinference.core.utils 55 INFO     Remove empty directory: /data/cache/v2
+2025-12-29 15:54:08,811 xinference.core.worker 55 INFO     Connected to supervisor as a fresh worker
+2025-12-29 15:54:08,828 xinference.core.worker 55 INFO     Xinference worker 0.0.0.0:47687 started
+2025-12-29 15:54:15,056 xinference.api.restful_api 1 INFO     Starting Xinference at endpoint: http://0.0.0.0:9997
+2025-12-29 15:54:15,427 uvicorn.error 1 INFO     Started server process [1]
+2025-12-29 15:54:15,427 uvicorn.error 1 INFO     Waiting for application startup.
+2025-12-29 15:54:15,427 uvicorn.error 1 INFO     Application startup complete.
+2025-12-29 15:54:15,428 uvicorn.error 1 INFO     Uvicorn running on http://0.0.0.0:9997 (Press CTRL+C to quit)
+2025-12-29 16:19:09,427 uvicorn.error 1 INFO     Shutting down
+2025-12-29 16:19:09,527 uvicorn.error 1 INFO     Waiting for application shutdown.
+2025-12-29 16:19:09,527 uvicorn.error 1 INFO     Application shutdown complete.
+2025-12-29 16:19:09,527 uvicorn.error 1 INFO     Finished server process [1]

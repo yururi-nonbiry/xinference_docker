@@ -1,0 +1,131 @@
+2025-12-29 16:19:30,096 xinference.core.supervisor 49 INFO     Xinference supervisor 0.0.0.0:51677 started
+2025-12-29 16:19:30,110 xinference.core.worker 49 INFO     Starting metrics export server at 0.0.0.0:None
+2025-12-29 16:19:30,113 xinference.core.worker 49 INFO     Checking metrics export server...
+2025-12-29 16:19:32,123 xinference.core.worker 49 INFO     Metrics server is started at: http://0.0.0.0:43813
+2025-12-29 16:19:32,124 xinference.core.worker 49 INFO     Purge cache directory: /data/cache
+2025-12-29 16:19:32,124 xinference.core.utils 49 INFO     Remove empty directory: /data/cache/v2
+2025-12-29 16:19:32,125 xinference.core.worker 49 INFO     Connected to supervisor as a fresh worker
+2025-12-29 16:19:32,139 xinference.core.worker 49 INFO     Xinference worker 0.0.0.0:51677 started
+2025-12-29 16:19:38,453 xinference.api.restful_api 1 INFO     Starting Xinference at endpoint: http://0.0.0.0:9997
+2025-12-29 16:19:38,594 uvicorn.error 1 INFO     Started server process [1]
+2025-12-29 16:19:38,595 uvicorn.error 1 INFO     Waiting for application startup.
+2025-12-29 16:19:38,595 uvicorn.error 1 INFO     Application startup complete.
+2025-12-29 16:19:38,595 uvicorn.error 1 INFO     Uvicorn running on http://0.0.0.0:9997 (Press CTRL+C to quit)
+2025-12-29 16:28:26,004 xinference.core.supervisor 49 ERROR    [request 74cbd7e0-e516-11f0-9c97-827fffcbd458] Leave describe_model, error: Model not found in the model list, uid: ruri-v3-310m, elapsed time: 0 s
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/xinference/core/utils.py", line 94, in wrapped
+    ret = await func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/xinference/core/supervisor.py", line 1746, in describe_model
+    raise ValueError(f"Model not found in the model list, uid: {model_uid}")
+ValueError: Model not found in the model list, uid: ruri-v3-310m
+2025-12-29 16:28:26,005 xinference.api.restful_api 1 ERROR    [address=0.0.0.0:51677, pid=49] Model not found in the model list, uid: ruri-v3-310m
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/xinference/api/restful_api.py", line 1200, in describe_model
+    data = await (await self._get_supervisor_ref()).describe_model(model_uid)
+  File "/usr/local/lib/python3.10/dist-packages/xoscar/backends/context.py", line 262, in send
+    return self._process_result_message(result)
+  File "/usr/local/lib/python3.10/dist-packages/xoscar/backends/context.py", line 111, in _process_result_message
+    raise message.as_instanceof_cause()
+  File "/usr/local/lib/python3.10/dist-packages/xoscar/backends/pool.py", line 689, in send
+    result = await self._run_coro(message.message_id, coro)
+  File "/usr/local/lib/python3.10/dist-packages/xoscar/backends/pool.py", line 389, in _run_coro
+    return await coro
+  File "/usr/local/lib/python3.10/dist-packages/xoscar/api.py", line 418, in __on_receive__
+    return await super().__on_receive__(message)  # type: ignore
+  File "xoscar/core.pyx", line 564, in __on_receive__
+    raise ex
+  File "xoscar/core.pyx", line 526, in xoscar.core._BaseActor.__on_receive__
+    async with self._lock:
+  File "xoscar/core.pyx", line 527, in xoscar.core._BaseActor.__on_receive__
+    with debug_async_timeout('actor_lock_timeout',
+  File "xoscar/core.pyx", line 532, in xoscar.core._BaseActor.__on_receive__
+    result = await result
+  File "/usr/local/lib/python3.10/dist-packages/xinference/core/utils.py", line 94, in wrapped
+    ret = await func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/xinference/core/supervisor.py", line 1746, in describe_model
+    raise ValueError(f"Model not found in the model list, uid: {model_uid}")
+ValueError: [address=0.0.0.0:51677, pid=49] Model not found in the model list, uid: ruri-v3-310m
+2025-12-29 16:28:26,006 uvicorn.access 1 INFO     172.18.0.1:53552 - "GET /v1/models/ruri-v3-310m HTTP/1.1" 400
+2025-12-29 16:31:04,452 uvicorn.access 1 INFO     192.168.100.12:51832 - "GET / HTTP/1.1" 307
+2025-12-29 16:31:04,522 uvicorn.access 1 INFO     192.168.100.12:51832 - "GET /ui/ HTTP/1.1" 200
+2025-12-29 16:31:04,628 uvicorn.access 1 INFO     192.168.100.12:51832 - "GET /ui/static/js/main.260d68c4.js HTTP/1.1" 200
+2025-12-29 16:31:04,643 uvicorn.access 1 INFO     192.168.100.12:64735 - "GET /ui/static/css/main.cbff5aac.css HTTP/1.1" 200
+2025-12-29 16:31:07,456 uvicorn.access 1 INFO     192.168.100.12:51832 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 16:31:07,460 uvicorn.access 1 INFO     192.168.100.12:64735 - "GET /v1/cluster/auth HTTP/1.1" 200
+2025-12-29 16:31:07,501 uvicorn.access 1 INFO     192.168.100.12:50609 - "GET /ui/static/media/icon.4603d52c63041e5dfbfd.webp HTTP/1.1" 200
+2025-12-29 16:31:07,520 uvicorn.access 1 INFO     192.168.100.12:64735 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 16:31:07,568 uvicorn.access 1 INFO     192.168.100.12:50609 - "GET /v1/cluster/auth HTTP/1.1" 200
+2025-12-29 16:31:07,587 uvicorn.access 1 INFO     192.168.100.12:57927 - "GET /ui/favicon.svg HTTP/1.1" 200
+2025-12-29 16:31:07,866 uvicorn.access 1 INFO     192.168.100.12:58434 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 16:31:07,894 uvicorn.access 1 INFO     192.168.100.12:51832 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:31:07,894 uvicorn.access 1 INFO     192.168.100.12:64735 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:31:16,386 uvicorn.access 1 INFO     192.168.100.12:51832 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:31:16,387 uvicorn.access 1 INFO     192.168.100.12:55960 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:31:34,613 uvicorn.access 1 INFO     192.168.100.12:63658 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:31:34,613 uvicorn.access 1 INFO     192.168.100.12:62811 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:31:45,326 uvicorn.access 1 INFO     192.168.100.12:56808 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:31:45,338 uvicorn.access 1 INFO     192.168.100.12:65113 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:31:46,268 uvicorn.access 1 INFO     192.168.100.12:56808 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:31:46,486 uvicorn.access 1 INFO     192.168.100.12:65113 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:31:50,913 uvicorn.access 1 INFO     192.168.100.12:56808 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:31:50,914 uvicorn.access 1 INFO     192.168.100.12:65113 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:32:16,814 uvicorn.access 1 INFO     192.168.100.12:59315 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:32:16,815 uvicorn.access 1 INFO     192.168.100.12:52199 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:32:21,510 uvicorn.access 1 INFO     192.168.100.12:59315 - "GET /v1/models HTTP/1.1" 200
+2025-12-29 16:32:24,848 uvicorn.access 1 INFO     192.168.100.12:59315 - "GET /v1/models/prompts HTTP/1.1" 200
+2025-12-29 16:32:24,894 uvicorn.access 1 INFO     192.168.100.12:51833 - "GET /v1/models/families HTTP/1.1" 200
+2025-12-29 16:33:54,626 uvicorn.access 1 INFO     192.168.100.12:62079 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 16:33:54,626 uvicorn.access 1 INFO     192.168.100.12:51523 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:33:54,954 uvicorn.access 1 INFO     192.168.100.12:65070 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:33:55,431 uvicorn.access 1 INFO     192.168.100.12:51523 - "GET /v1/models HTTP/1.1" 200
+2025-12-29 16:33:56,934 uvicorn.access 1 INFO     192.168.100.12:51523 - "GET /v1/models/prompts HTTP/1.1" 200
+2025-12-29 16:33:56,934 uvicorn.access 1 INFO     192.168.100.12:62079 - "GET /v1/models/families HTTP/1.1" 200
+2025-12-29 16:34:08,099 uvicorn.access 1 INFO     192.168.100.12:55819 - "GET /v1/models HTTP/1.1" 200
+2025-12-29 16:34:18,193 uvicorn.access 1 INFO     192.168.100.12:63172 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 16:34:18,193 uvicorn.access 1 INFO     192.168.100.12:58639 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:18,707 uvicorn.access 1 INFO     192.168.100.12:57314 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:20,963 uvicorn.access 1 INFO     192.168.100.12:58639 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:20,978 uvicorn.access 1 INFO     192.168.100.12:63172 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:23,315 uvicorn.access 1 INFO     192.168.100.12:58639 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:23,642 uvicorn.access 1 INFO     192.168.100.12:63172 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:33,502 uvicorn.access 1 INFO     192.168.100.12:53779 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:33,503 uvicorn.access 1 INFO     192.168.100.12:58291 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:35,481 uvicorn.access 1 INFO     192.168.100.12:53779 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:35,482 uvicorn.access 1 INFO     192.168.100.12:58291 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:40,408 uvicorn.access 1 INFO     192.168.100.12:53779 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:40,416 uvicorn.access 1 INFO     192.168.100.12:58291 - "GET /v1/model_registrations/image?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:45,906 uvicorn.access 1 INFO     192.168.100.12:62245 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:45,911 uvicorn.access 1 INFO     192.168.100.12:59231 - "GET /v1/model_registrations/audio?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:47,278 uvicorn.access 1 INFO     192.168.100.12:62245 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:47,280 uvicorn.access 1 INFO     192.168.100.12:59231 - "GET /v1/model_registrations/video?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:51,159 uvicorn.access 1 INFO     192.168.100.12:59231 - "GET /v1/model_registrations/LLM HTTP/1.1" 200
+2025-12-29 16:34:53,266 uvicorn.access 1 INFO     192.168.100.12:59231 - "GET /v1/model_registrations/video?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:53,285 uvicorn.access 1 INFO     192.168.100.12:54835 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:54,085 uvicorn.access 1 INFO     192.168.100.12:59231 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:54,086 uvicorn.access 1 INFO     192.168.100.12:54835 - "GET /v1/model_registrations/audio?detailed=true HTTP/1.1" 200
+2025-12-29 16:34:54,900 uvicorn.access 1 INFO     192.168.100.12:59231 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:34:54,901 uvicorn.access 1 INFO     192.168.100.12:54835 - "GET /v1/model_registrations/image?detailed=true HTTP/1.1" 200
+2025-12-29 16:35:04,076 uvicorn.access 1 INFO     192.168.100.12:51037 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:35:04,086 uvicorn.access 1 INFO     192.168.100.12:56988 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:35:04,729 uvicorn.access 1 INFO     192.168.100.12:51037 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:35:04,731 uvicorn.access 1 INFO     192.168.100.12:56988 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:35:38,823 uvicorn.access 1 INFO     192.168.100.12:52356 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:35:38,838 uvicorn.access 1 INFO     192.168.100.12:49948 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:35:47,608 uvicorn.access 1 INFO     192.168.100.12:53894 - "POST /v1/models/update_type HTTP/1.1" 200
+2025-12-29 16:35:47,725 uvicorn.access 1 INFO     192.168.100.12:65111 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:35:47,727 uvicorn.access 1 INFO     192.168.100.12:53894 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:35:53,841 uvicorn.access 1 INFO     192.168.100.12:56977 - "GET /v1/model_registrations/LLM HTTP/1.1" 200
+2025-12-29 16:35:58,689 uvicorn.access 1 INFO     192.168.100.12:56977 - "GET /v1/model_registrations/video?detailed=true HTTP/1.1" 200
+2025-12-29 16:35:58,710 uvicorn.access 1 INFO     192.168.100.12:63285 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:35:59,629 uvicorn.access 1 INFO     192.168.100.12:56977 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:35:59,630 uvicorn.access 1 INFO     192.168.100.12:63285 - "GET /v1/model_registrations/audio?detailed=true HTTP/1.1" 200
+2025-12-29 16:36:01,247 uvicorn.access 1 INFO     192.168.100.12:56977 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:36:01,249 uvicorn.access 1 INFO     192.168.100.12:63285 - "GET /v1/model_registrations/image?detailed=true HTTP/1.1" 200
+2025-12-29 16:36:01,830 uvicorn.access 1 INFO     192.168.100.12:56977 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:36:01,832 uvicorn.access 1 INFO     192.168.100.12:63285 - "GET /v1/model_registrations/rerank?detailed=true HTTP/1.1" 200
+2025-12-29 16:36:02,311 uvicorn.access 1 INFO     192.168.100.12:63285 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 16:36:02,311 uvicorn.access 1 INFO     192.168.100.12:56977 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 16:44:42,451 uvicorn.error 1 INFO     Shutting down
+2025-12-29 16:44:42,551 uvicorn.error 1 INFO     Waiting for application shutdown.
+2025-12-29 16:44:42,552 uvicorn.error 1 INFO     Application shutdown complete.
+2025-12-29 16:44:42,552 uvicorn.error 1 INFO     Finished server process [1]

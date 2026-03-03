@@ -1,0 +1,28 @@
+2025-12-29 17:02:47,357 xinference.core.supervisor 55 INFO     Xinference supervisor 0.0.0.0:41412 started
+2025-12-29 17:02:47,372 xinference.core.worker 55 INFO     Starting metrics export server at 0.0.0.0:None
+2025-12-29 17:02:47,373 xinference.core.worker 55 INFO     Checking metrics export server...
+2025-12-29 17:02:49,182 xinference.core.worker 55 INFO     Metrics server is started at: http://0.0.0.0:44073
+2025-12-29 17:02:49,182 xinference.core.worker 55 INFO     Purge cache directory: /data/cache
+2025-12-29 17:02:49,183 xinference.core.utils 55 INFO     Remove empty directory: /data/cache/v2
+2025-12-29 17:02:49,184 xinference.core.worker 55 INFO     Connected to supervisor as a fresh worker
+2025-12-29 17:02:49,198 xinference.core.worker 55 INFO     Xinference worker 0.0.0.0:41412 started
+2025-12-29 17:02:55,483 xinference.api.restful_api 1 INFO     Starting Xinference at endpoint: http://0.0.0.0:9997
+2025-12-29 17:02:55,630 uvicorn.error 1 INFO     Started server process [1]
+2025-12-29 17:02:55,630 uvicorn.error 1 INFO     Waiting for application startup.
+2025-12-29 17:02:55,630 uvicorn.error 1 INFO     Application startup complete.
+2025-12-29 17:02:55,631 uvicorn.error 1 INFO     Uvicorn running on http://0.0.0.0:9997 (Press CTRL+C to quit)
+2025-12-29 17:06:02,114 uvicorn.access 1 INFO     192.168.100.12:56596 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 17:06:02,408 uvicorn.access 1 INFO     192.168.100.12:61890 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 17:06:02,451 uvicorn.access 1 INFO     192.168.100.12:55653 - "GET /v1/model_registrations/LLM?detailed=true HTTP/1.1" 200
+2025-12-29 17:06:32,836 uvicorn.access 1 INFO     192.168.100.12:62090 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 17:06:32,856 uvicorn.access 1 INFO     192.168.100.12:49957 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 17:06:37,222 uvicorn.access 1 INFO     192.168.100.12:49957 - "GET /ui/ HTTP/1.1" 304
+2025-12-29 17:06:37,403 uvicorn.access 1 INFO     192.168.100.12:49957 - "GET /v1/cluster/version HTTP/1.1" 200
+2025-12-29 17:06:37,433 uvicorn.access 1 INFO     192.168.100.12:62090 - "GET /v1/model_registrations/embedding?detailed=true HTTP/1.1" 200
+2025-12-29 17:06:37,433 uvicorn.access 1 INFO     192.168.100.12:58535 - "GET /v1/cluster/auth HTTP/1.1" 200
+2025-12-29 17:06:37,434 uvicorn.access 1 INFO     192.168.100.12:52582 - "GET /v1/virtualenvs HTTP/1.1" 200
+2025-12-29 17:06:37,434 uvicorn.access 1 INFO     192.168.100.12:56895 - "GET /v1/cluster/devices HTTP/1.1" 200
+2025-12-29 17:07:12,407 uvicorn.error 1 INFO     Shutting down
+2025-12-29 17:07:12,507 uvicorn.error 1 INFO     Waiting for application shutdown.
+2025-12-29 17:07:12,508 uvicorn.error 1 INFO     Application shutdown complete.
+2025-12-29 17:07:12,508 uvicorn.error 1 INFO     Finished server process [1]
