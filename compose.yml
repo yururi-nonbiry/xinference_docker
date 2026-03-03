@@ -11,6 +11,9 @@ services:
     volumes:
       - ./xinference-data:/data
       - ~/.cache/huggingface:/root/.cache/huggingface # モデルキャッシュの共有
+      - ./launch_models.sh:/launch_models.sh:ro
+      - ./ruri_v3_310m.json:/data/ruri_v3_310m.json:ro
+      - ./ruri_v3_reranker_large.json:/data/ruri_v3_reranker_large.json:ro
     deploy:
       resources:
         reservations:
@@ -18,4 +21,4 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-    command: xinference-local --host 0.0.0.0 --port 9997
+    command: /bin/bash /launch_models.sh
